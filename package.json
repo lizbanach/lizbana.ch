@@ -1,0 +1,58 @@
+{
+  "name": "readthissummer",
+  "version": "1.0.0",
+  "description": "The site code is now hosted on Github. Login into Github with Fuzzco account to get acccess. --- # Footer image updates Steps to taking when adding new images to the websites random image footer.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "run-p html js sass css serve watch",
+    "build": "run-p html js sass css",
+    "html": "static-site -s source -b build -i images --template _template.html --block content",
+    "serve": "live-server build",
+    "sass": "node-sass source/scss/style.scss source/style.css",
+    "css": "parcel build source/style.css -d build",
+    "js": "parcel build source/app.js -d build",
+    "watch": "rerun-script",
+    "img": "imagemin-newer source/images build/images",
+    "predeploy:dev": "npm run build",
+    "deploy:dev": "surge build --domain lizbana.ch.surge.sh",
+    "predeploy:stage": "npm run build",
+    "deploy:stage": "surge build --domain lizbana.ch.surge.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "watches": {
+    "html": [
+      "source/**/*.html"
+    ],
+    "sass": [
+      "source/**/*.scss"
+    ],
+    "css": [
+      "source/**/*.css"
+    ],
+    "js": [
+      "source/**/*.js"
+    ],
+    "img": [
+      "source/images/**/*.*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/fuzzco/readthissummer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fuzzco/readthissummer#readme",
+  "devDependencies": {
+    "imagemin-newer": "^1.0.2",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.3",
+    "parcel-bundler": "^1.11.0",
+    "rerun-script": "^0.6.0",
+    "scrollreveal": "^3.4.0",
+    "static-site": "^1.3.3",
+    "surge": "^0.20.1"
+  }
+}

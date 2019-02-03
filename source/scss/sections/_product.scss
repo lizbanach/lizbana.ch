@@ -1,0 +1,58 @@
+// product images - snippets/product-images.liquid
+
+.product-images-wrapper {
+  // thumbnail img reveal
+  position: relative;
+
+  .product-image.is-active {
+    z-index: 200;
+    opacity: 1;
+    position: relative;
+    transition: $link-transition;
+  }
+
+  .product-image {
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: $link-transition;
+  }
+  // end thumbnail img reveal
+
+  // start regular img reveal
+  &.js-product-hover:hover {
+    .product-image.is-active {
+      opacity: 0;
+      transition: $link-transition;
+    }
+    .product-image {
+      opacity: 1;
+      transition: $link-transition;
+    }
+  }
+  // end regular img reveal
+}
+
+// end product images
+
+// product thumbnail images - snippets/product-images-thumbnails.liquid
+
+.product-thumbnails-wrapper {
+  display: flex;
+
+  .product-thumbnail {
+    width: auto;
+    margin-right: $leading/2;
+  }
+}
+
+// end product images
+
+// product variants - snippets/product-variants.liquid
+.product-variants-wrapper {
+}
+// end product variants

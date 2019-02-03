@@ -1,0 +1,49 @@
+// carousel - sections/carousel.liquid + snippets/carousel.liquid
+
+.carousel-wrapper {
+  padding: 4em 1em;
+}
+
+.carousel-cell {
+  width: 90%;
+  margin-right: 5em;
+  height: 100%;
+}
+
+.flickity-viewport {
+  min-height: 300px;
+}
+
+.cell-content-no-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  .cell-content {
+    flex: 1;
+    align-self: center;
+  }
+}
+
+.cell-content-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cell-content {
+  flex: 1;
+  align-self: center;
+}
+
+.cell-image {
+  flex: 1;
+
+  img {
+    max-height: 400px;
+    width: auto;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,104 @@
+$include-modal: true !default;
+$easing-function: cubic-bezier(0.215, 0.440, 0.420, 0.880) !default;
+$easing-duration: 300ms !default;
+$easing-position: translate3d(0, 20px, 0) !default;
+@mixin modal() {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0 linear $easing-duration, opacity $easing-duration $easing-function;
+  z-index: 600;
+  background-color: rgba($gray, 0.75);
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0;
+
+    .modal-content {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */
+  }
+
+  p {
+    margin-top: 1em;
+  }
+}
+
+.quick-shop-modal {
+  p {
+    margin-top: 0 !important;
+  }
+}
+@mixin modal-content() {
+  box-sizing: border-box;
+  position: relative;
+  max-height: 100vh;
+  z-index: 102;
+  float: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0;
+  visibility: hidden;
+  background-color: $white;
+  text-align: left;
+  padding: $leading;
+  transition: transform 0 linear $easing-duration, visibility 0 linear $easing-duration, opacity $easing-duration $easing-function;
+  transform: $easing-position;
+  width: 99%;
+  max-width: 75rem;
+}
+@mixin modal-close() {
+  display: block !important;
+  position: absolute;
+  top: $baseline*2;
+  right: $baseline*2;
+  padding: $baseline*3;
+}
+@mixin modal-title() {}
+@if $include-modal == true {
+  .modal {
+    @include modal();
+  }
+
+  .modal-content {
+    @include modal-content();
+  }
+
+  .modal-close {
+    @include modal-close();
+  }
+
+  .modal-title {
+    @include modal-title();
+  }
+}
+
+.x {
+  height: 0.8rem;
+  width: 0.8rem;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  // background-image: url("x.svg");
+}

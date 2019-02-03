@@ -1,0 +1,55 @@
+.newsletter {
+  position: relative;
+}
+
+.newsletter-form {
+  width: 100%;
+  display: flex;
+}
+
+.newsletter-input,
+.newsletter-submit {
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  box-shadow: none;
+  outline: none;
+}
+
+.newsletter-input {
+  flex: 1;
+  border-right: 0;
+}
+
+.newsletter-submit {
+  transition: all 300ms ease-in-out;
+}
+
+.newsletter-submit:focus,
+.newsletter-submit:hover {
+  background-color: black;
+  color: white;
+  transition: all 300ms ease-in-out;
+}
+
+.newsletter-success {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+.newsletter-error,
+.newsletter-form,
+.newsletter-success {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out;
+}
+
+.newsletter-error.is-active,
+.newsletter-form.is-active,
+.newsletter-success.is-active {
+  opacity: 1;
+  pointer-events: initial;
+  transition: opacity 300ms ease-in-out;
+}

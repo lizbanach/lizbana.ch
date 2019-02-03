@@ -1,0 +1,24 @@
+.footer {
+  background-color: lightgray;
+  padding: 1em;
+}
+
+.footer-menus {
+  display: flex;
+  justify-content: space-between;
+  @include smaller-than($large) {
+    display: block;
+  }
+}
+
+.footer-link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+@include smaller-than($large) {
+  .social-links, .footer-links, .newsletter {
+    padding: 1em 0;
+  }
+}

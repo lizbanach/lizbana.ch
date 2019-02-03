@@ -1,0 +1,25 @@
+.tab-content-wrapper {
+  .toggle-panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .toggle {
+    &.active {
+      p {
+        font-weight: bold;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      max-height: 100px;
+      width: auto;
+    }
+  }
+}
