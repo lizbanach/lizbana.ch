@@ -60,19 +60,6 @@ h6 {}
 
 p {}
 
-a {
-  transition: $link-transition;
-  color: $off-black;
-  text-decoration: none;
-}
-
-a:hover,
-a:active,
-a:visited {
-  transition: $link-transition;
-  color: $off-black;
-}
-
 ul, ol {
   padding-left: 1.25em;
 }
@@ -113,10 +100,33 @@ a.txt-underline {
   text-decoration: underline;
 }
 
-.txt-hover-underline
+.txt-hover-underline,
 a.txt-hover-underline {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+a {
+  display: inline-block;
+  color: $off-black;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: $off-black;
+    transition: width 0.3s;
+  }
+
+  &:hover {
+    color: $off-black;
+    text-decoration: none;
+    &::after {
+      width: 100%;
+    }
   }
 }

@@ -3254,17 +3254,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
   margin-bottom: 0; }
 
-a {
-  transition: all 0.25s linear;
-  color: #393839;
-  text-decoration: none; }
-
-a:hover,
-a:active,
-a:visited {
-  transition: all 0.25s linear;
-  color: #393839; }
-
 ul, ol {
   padding-left: 1.25em; }
 
@@ -3301,12 +3290,29 @@ a.txt-no-underline {
 a.txt-underline {
   text-decoration: underline; }
 
-.txt-hover-underline
+.txt-hover-underline,
 a.txt-hover-underline {
   text-decoration: none; }
-  .txt-hover-underline
-a.txt-hover-underline:hover {
+  .txt-hover-underline:hover,
+  a.txt-hover-underline:hover {
     text-decoration: underline; }
+
+a {
+  display: inline-block;
+  color: #393839;
+  text-decoration: none; }
+  a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: #393839;
+    transition: width 0.3s; }
+  a:hover {
+    color: #393839;
+    text-decoration: none; }
+    a:hover::after {
+      width: 100%; }
 
 .rte h4, .rte h5, .rte h6 {
   text-transform: uppercase; }
@@ -3382,6 +3388,10 @@ a.txt-hover-underline:hover {
 
 .fill-black {
   fill: black; }
+
+/* fade in */
+body {
+  display: none; }
 
 /* hide/show all sizes */
 .hide {
