@@ -5,5 +5,8 @@
   padding: 4em 0;
   a {
     color: $white;
+    &::after {
+      background: $white;
+    }
   }
 }

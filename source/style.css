@@ -4091,6 +4091,8 @@ https://flickity.metafizzy.co
   padding: 4em 0; }
   .footer a {
     color: white; }
+    .footer a::after {
+      background: white; }
 
 .hero-wrapper {
   position: relative; }
