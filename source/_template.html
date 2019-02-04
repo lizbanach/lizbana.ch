@@ -30,7 +30,7 @@
     <!-- desktop menu -->
     <ul class="nav-menu">
       <li>
-        <a href="mailto:hello@lizbana.ch" xlink:href="mailto:hello@lizbana.ch">
+        <a href="mailto:hello@lizbana.ch?subject=not a love letter" xlink:href="mailto:hello@lizbana.ch">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 427 427" style="enable-background:new 0 0 427 427;">
           <path d="M426.399,78.826c-0.062-0.468-0.325-0.921-0.488-1.372c-0.162-0.445-0.518-0.821-0.767-1.216
           	c-0.162-0.261-0.283-0.555-0.486-0.797c-0.064-0.078-0.185-0.108-0.253-0.181c-0.32-0.352-0.723-0.604-1.112-0.88
@@ -56,6 +56,26 @@
   <main>
     {% block content %} {% endblock %}
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row row-is-centered">
+        <div class="col col-is-12 ns-col-is-10">
+          <h2 class="txt-size-3">contact</h2>
+          <div class="row">
+            <div class="col col-is-12 lg-col-is-6 col-is-flush">
+              <p class="txt-size-2 lead-2"><a href="mailto:hello@lizbana.ch?subject=hi there">hello@lizbana.ch</a></p>
+              <p class="txt-size-2 lead-1"><a href="tel:1-443-691-6232">443 691 6232</a></p>
+            </div>
+            <div class="col col-is-12 lg-col-is-6 col-is-flush">
+              <p class="txt-size-2 lead-1 lg-lead-2"><a target="_blank" href="https://github.com/lizbanach">github</a> &bull; <a target="_blank" href="https://www.linkedin.com/in/elizabethrbanach/">linkedin</a></p>
+              <p class="txt-size-2 lead-1"><a target="_blank" href="/pdf/liz-banach-resume.pdf">my resume</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="/app.js" async></script>
 </body>

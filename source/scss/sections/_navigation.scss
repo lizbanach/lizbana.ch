@@ -17,12 +17,12 @@
 }
 
 .nav-logo {
-	padding-left: 18%;
+	padding-left: 8em;
 }
 
 .nav-menu {
 	margin: 0;
-	padding: 0 18% 0 0;
+	padding: 0 8em 0 0;
 	list-style-type: none;
 
 	li {
@@ -34,7 +34,7 @@
 
 			svg {
 				vertical-align: center;
-				width: 42px;
+				width: 35px;
 				padding-top: 2em;
 				fill: $off-black;
 				transition: $link-transition;
@@ -43,6 +43,21 @@
 			&:hover {
 				svg {
 					fill: #d8c9c9;
+					transition: $link-transition;
+				}
+			}
+
+			&:visited {
+				svg {
+					fill: $off-black;
+					transition: $link-transition;
+				}
+			}
+
+			&:active {
+				svg {
+					fill: $off-black;
+					transition: $link-transition;
 				}
 			}
 
