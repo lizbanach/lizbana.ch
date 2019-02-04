@@ -692,6 +692,12 @@ textarea {
 .col-is-flush {
   padding: 0 !important; }
 
+.col-is-flush-left {
+  padding-left: 0 !important; }
+
+.col-is-flush-right {
+  padding-right: 0 !important; }
+
 .container {
   width: 91.66667%;
   max-width: 60rem;
@@ -3858,142 +3864,47 @@ https://flickity.metafizzy.co
   line-height: 80px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background: white;
+  padding: 0; }
+  .nav a::after {
+    background: transparent; }
+
+.nav-logo {
+  padding-left: 18%; }
 
 .nav-menu {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  transition: max-height 0.4s ease-in-out;
-  max-height: none; }
+  padding-right: 18%;
+  list-style-type: none; }
   .nav-menu li {
     list-style-type: none;
-    display: inline-block;
-    text-align: center; }
+    display: inline-block; }
     .nav-menu li a {
       display: block; }
+      .nav-menu li a svg {
+        vertical-align: center;
+        width: 42px;
+        padding-top: 2em;
+        fill: #393839;
+        transition: all 0.25s linear; }
+      .nav-menu li a:hover svg {
+        fill: #d8c9c9; }
 
-.hamburger-icon {
-  width: 30px;
-  height: 30px;
-  text-align: center; }
-
-.nav-hamburger {
-  display: none; }
-
-.action-link,
-.nav-link,
-.site-logo {
-  text-decoration: none;
-  margin: 0 0.33em; }
-
-.nav-actions,
-.nav-logo,
-.nav-menu {
-  align-self: center; }
-
-.nav-actions,
-.nav-hamburger,
-.nav-menu {
-  flex-basis: 40%; }
-
-.hamburger-icon {
-  width: 30px;
-  height: 30px;
-  text-align: center; }
-
-.nav-hamburger {
-  display: none; }
-
-.nav-icon {
-  width: 30px;
-  height: 16px;
-  position: relative;
-  margin-left: 1em;
-  z-index: 100;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer; }
-  .nav-icon span {
+@media (max-width: 48rem) {
+  .nav {
     display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: black;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out; }
-    .nav-icon span:nth-child(1) {
-      top: 0;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center; }
-    .nav-icon span:nth-child(2) {
-      top: 8px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center; }
-    .nav-icon span:nth-child(3) {
-      top: 16px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center; }
-  .nav-icon.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: -2px;
-    left: 10px; }
-  .nav-icon.open span:nth-child(2) {
-    width: 0;
-    opacity: 0; }
-  .nav-icon.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 20px;
-    left: 10px; }
-
-@media (max-width: 55rem) {
-  .nav-hamburger {
-    display: block; }
-  .nav-actions {
-    display: none; }
+    line-height: 3;
+    height: auto;
+    padding: 2em 0 1em 0;
+    text-align: center; }
   .nav-logo {
-    width: 100%; }
+    padding-left: 0; }
   .nav-menu {
-    list-style-type: none;
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    top: 80px;
-    background: white; }
-    .nav-menu.active {
-      max-height: 20em;
-      z-index: 20; }
-    .nav-menu li {
-      display: block;
-      line-height: 4em; } }
+    padding-right: 0; }
+    .nav-menu li a svg {
+      padding-top: .5em; } }
 
 .product-card-wrapper {
   position: relative; }
@@ -4054,142 +3965,47 @@ https://flickity.metafizzy.co
   line-height: 80px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background: white;
+  padding: 0; }
+  .nav a::after {
+    background: transparent; }
+
+.nav-logo {
+  padding-left: 18%; }
 
 .nav-menu {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  transition: max-height 0.4s ease-in-out;
-  max-height: none; }
+  padding-right: 18%;
+  list-style-type: none; }
   .nav-menu li {
     list-style-type: none;
-    display: inline-block;
-    text-align: center; }
+    display: inline-block; }
     .nav-menu li a {
       display: block; }
+      .nav-menu li a svg {
+        vertical-align: center;
+        width: 42px;
+        padding-top: 2em;
+        fill: #393839;
+        transition: all 0.25s linear; }
+      .nav-menu li a:hover svg {
+        fill: #d8c9c9; }
 
-.hamburger-icon {
-  width: 30px;
-  height: 30px;
-  text-align: center; }
-
-.nav-hamburger {
-  display: none; }
-
-.action-link,
-.nav-link,
-.site-logo {
-  text-decoration: none;
-  margin: 0 0.33em; }
-
-.nav-actions,
-.nav-logo,
-.nav-menu {
-  align-self: center; }
-
-.nav-actions,
-.nav-hamburger,
-.nav-menu {
-  flex-basis: 40%; }
-
-.hamburger-icon {
-  width: 30px;
-  height: 30px;
-  text-align: center; }
-
-.nav-hamburger {
-  display: none; }
-
-.nav-icon {
-  width: 30px;
-  height: 16px;
-  position: relative;
-  margin-left: 1em;
-  z-index: 100;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer; }
-  .nav-icon span {
+@media (max-width: 48rem) {
+  .nav {
     display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: black;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out; }
-    .nav-icon span:nth-child(1) {
-      top: 0;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center; }
-    .nav-icon span:nth-child(2) {
-      top: 8px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center; }
-    .nav-icon span:nth-child(3) {
-      top: 16px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center; }
-  .nav-icon.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: -2px;
-    left: 10px; }
-  .nav-icon.open span:nth-child(2) {
-    width: 0;
-    opacity: 0; }
-  .nav-icon.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 20px;
-    left: 10px; }
-
-@media (max-width: 55rem) {
-  .nav-hamburger {
-    display: block; }
-  .nav-actions {
-    display: none; }
+    line-height: 3;
+    height: auto;
+    padding: 2em 0 1em 0;
+    text-align: center; }
   .nav-logo {
-    width: 100%; }
+    padding-left: 0; }
   .nav-menu {
-    list-style-type: none;
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    top: 80px;
-    background: white; }
-    .nav-menu.active {
-      max-height: 20em;
-      z-index: 20; }
-    .nav-menu li {
-      display: block;
-      line-height: 4em; } }
+    padding-right: 0; }
+    .nav-menu li a svg {
+      padding-top: .5em; } }
 
 .icon-social {
   max-height: 1em; }

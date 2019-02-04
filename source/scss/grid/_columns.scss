@@ -27,6 +27,12 @@
 @mixin flush {
   padding: 0 !important;
 }
+@mixin flush-left {
+  padding-left: 0 !important;
+}
+@mixin flush-right {
+  padding-right: 0 !important;
+}
 
 .col { @include column(); }
 
@@ -65,3 +71,5 @@
 .col-is-left  { @include float(left); }
 .col-is-right { @include float(right); }
 .col-is-flush { @include flush(); }
+.col-is-flush-left { @include flush-left(); }
+.col-is-flush-right { @include flush-right(); }
