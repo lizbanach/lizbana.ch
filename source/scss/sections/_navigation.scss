@@ -8,6 +8,7 @@
 	align-items: center;
 	background: $white;
 	padding: 0;
+
 	a {
 		&::after {
 			background: transparent;
@@ -21,8 +22,7 @@
 
 .nav-menu {
 	margin: 0;
-	padding: 0;
-	padding-right: 18%;
+	padding: 0 18% 0 0;
 	list-style-type: none;
 
 	li {
@@ -31,6 +31,7 @@
 
 		a {
 			display: block;
+
 			svg {
 				vertical-align: center;
 				width: 42px;
@@ -38,33 +39,43 @@
 				fill: $off-black;
 				transition: $link-transition;
 			}
+
 			&:hover {
 				svg {
 					fill: #d8c9c9;
 				}
 			}
+
+			&::after {
+				content: "";
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 }
-
 @include smaller-than($medium) {
 	.nav {
 		display: block;
 		line-height: 3;
 		height: auto;
-		padding: 2em 0 1em 0;
+		padding: 2em 0 1em;
 		text-align: center;
 	}
+
 	.nav-logo {
 		padding-left: 0;
-
 	}
+
 	.nav-menu {
 		padding-right: 0;
+
 		li {
 			a {
 				svg {
-					padding-top: .5em;
+					padding-top: 0.5em;
 				}
 			}
 		}
