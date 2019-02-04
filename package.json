@@ -1,7 +1,6 @@
 {
-  "name": "readthissummer",
+  "name": "lizbana.ch",
   "version": "1.0.0",
-  "description": "The site code is now hosted on Github. Login into Github with Fuzzco account to get acccess. --- # Footer image updates Steps to taking when adding new images to the websites random image footer.",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
