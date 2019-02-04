@@ -71,7 +71,7 @@
 		}
 	}
 }
-@include smaller-than($medium) {
+@include smaller-than($large) {
 	.nav {
 		display: block;
 		line-height: 3;
