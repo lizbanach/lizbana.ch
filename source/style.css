@@ -3243,7 +3243,7 @@ textarea {
   color: #fafafa; }
 
 html {
-  background: #eee7e7;
+  background: #FCF9F8;
   color: #393839;
   font-size: 18px;
   padding-bottom: 0 !important;
@@ -3391,6 +3391,9 @@ a {
 
 .bg-light-gray {
   background-color: #fafafa; }
+
+.bg-light-pink {
+  background-color: #f2e5e0; }
 
 .fill-black {
   fill: black; }
@@ -3857,6 +3860,9 @@ https://flickity.metafizzy.co
 .total-amount {
   text-align: right; }
 
+.header {
+  padding: 4em 0; }
+
 .nav {
   position: relative;
   width: 100%;
@@ -3969,6 +3975,9 @@ https://flickity.metafizzy.co
   .product-thumbnails-wrapper .product-thumbnail {
     width: auto;
     margin-right: 0.71425rem; }
+
+.header {
+  padding: 4em 0; }
 
 .nav {
   position: relative;
@@ -4085,14 +4094,33 @@ https://flickity.metafizzy.co
   transition: opacity 300ms ease-in-out; }
 
 .footer {
-  background: #393839;
+  background: url("images/footer.jpg") no-repeat;
+  background-size: cover;
+  padding: 3em; }
+
+.footer-content {
   color: white;
-  width: 100%;
-  padding: 4em 0; }
-  .footer a {
+  background: #393839;
+  padding: 4em 6em; }
+  .footer-content a {
     color: white; }
-    .footer a::after {
+    .footer-content a::after {
       background: white; }
+    .footer-content a svg {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 25px;
+      fill: white;
+      transition: all 0.25s linear; }
+  .footer-content .envelope::after {
+    background: transparent; }
+  .footer-content .envelope:hover svg {
+    fill: #d8c9c9;
+    transition: all 0.25s linear; }
+
+@media (max-width: 48rem) {
+  .footer-content {
+    padding: 4em 2em; } }
 
 .hero-wrapper {
   position: relative; }

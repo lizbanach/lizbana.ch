@@ -7,6 +7,12 @@
 
 .bg-light-gray { @include bg-light-gray(); }
 
+@mixin bg-light-pink {
+  background-color: $light-pink;
+}
+
+.bg-light-pink { @include bg-light-pink(); }
+
 
 // ┌───────┐
 // │ Fills │

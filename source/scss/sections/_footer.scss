@@ -1,12 +1,45 @@
 .footer {
-  background: $dark-gray;
+  background: url("images/footer.jpg") no-repeat;
+  background-size: cover;
+  padding: 3em;
+}
+
+.footer-content {
   color: $white;
-  width: 100%;
-  padding: 4em 0;
+  background: $off-black;
+  padding: 4em 6em;
+
   a {
     color: $white;
+
     &::after {
       background: $white;
     }
+
+    svg {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 25px;
+      fill: $white;
+      transition: $link-transition;
+    }
+  }
+
+  .envelope {
+    &::after {
+      background: transparent;
+    }
+
+    &:hover {
+      svg {
+        fill: #d8c9c9;
+        transition: $link-transition;
+      }
+    }
+  }
+}
+@include smaller-than($medium) {
+  .footer-content {
+    padding: 4em 2em;
   }
 }
